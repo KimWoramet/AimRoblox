@@ -52,7 +52,7 @@ local PredictionAmount = 0.165
 local mouse_box = Drawing.new("Square")
 mouse_box.Visible = true 
 mouse_box.ZIndex = 999 
-mouse_box.Color = Color3.fromRGB(228, 15, 255)
+mouse_box.Color = Color3.fromRGB(90, 53, 144)
 mouse_box.Thickness = 20 
 mouse_box.Size = Vector2.new(20, 20)
 mouse_box.Filled = true 
@@ -65,7 +65,7 @@ fov_circle.Filled = false
 fov_circle.Visible = false
 fov_circle.ZIndex = 999
 fov_circle.Transparency = 1
-fov_circle.Color = Color3.fromRGB(228, 15, 255)
+fov_circle.Color = Color3.fromRGB(90, 53, 144)
 
 local ExpectedArguments = {
     FindPartOnRayWithIgnoreList = {
@@ -288,7 +288,7 @@ local FieldOfViewBOX = GeneralTab:AddLeftTabbox("Field Of View") do
         fov_circle.Radius = Options.Radius.Value
         SilentAimSettings.FOVRadius = Options.Radius.Value
     end)
-    Main:AddToggle("MousePosition", {Text = "Show Silent Aim Target"}):AddColorPicker("MouseVisualizeColor", {Default = Color3.fromRGB(228, 15, 255)}):OnChanged(function()
+    Main:AddToggle("MousePosition", {Text = "Show Silent Aim Target"}):AddColorPicker("MouseVisualizeColor", {Default = Color3.fromRGB(90, 53, 144)}):OnChanged(function()
         mouse_box.Visible = Toggles.MousePosition.Value 
         SilentAimSettings.ShowSilentAimTarget = Toggles.MousePosition.Value 
     end)
